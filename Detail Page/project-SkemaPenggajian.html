@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Apk Web - Skema Penggajian AE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Detail Page/project-detail.css">
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<!-- Cursor glow background (shared with root script) -->
+<div id="cursor-glow"></div>
+
+<nav>
+  <a href="../index.html" class="logo">Dia Ayu<span>.</span></a>
+  <span class="nav-tag">CASE STUDY</span>
+  <a href="../index.html#projects" class="back-btn">← Kembali</a>
+</nav>
+
+<div class="proj-hero">
+  <div class="hero-bg"></div>
+  
+  <canvas id="topoCanvas"></canvas>
+  
+  <div class="desk-mock">
+    <div class="desk-topbar">
+      <div class="desk-dot" style="background:#ef4444;opacity:.5"></div>
+      <div class="desk-dot" style="background:#eab308;opacity:.5"></div>
+      <div class="desk-dot" style="background:#22c55e;opacity:.5"></div>
+    </div>
+    <div class="desk-body">
+      <div class="desk-sidebar">
+        <div class="desk-si active"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+      </div>
+      <div class="desk-main">
+        <div class="desk-header"></div>
+        <div class="desk-cards">
+          <div class="desk-card"></div>
+          <div class="desk-card"></div>
+          <div class="desk-card"></div>
+        </div>
+        <div class="desk-row" style="margin-top:6px"></div>
+        <div class="desk-row" style="width:80%"></div>
+        <div class="desk-row" style="width:60%"></div>
+        <div class="desk-row" style="margin-top:4px"></div>
+        <div class="desk-row" style="width:70%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">05 — Case Study · internship 2026</div>
+    
+    <h1 class="proj-title">Redesign Apk Web<br><span style="-webkit-text-stroke:1px #696969;color:transparent">Skema Penggajian AE</span></h1>
+    
+    <p class="proj-sub">Skema Penggajian AE merupakan pengembangan sistem internal perusahaan untuk mengotomatisasi perhitungan gaji, pengelolaan insentif, 
+      dan data Account Executive (AE). Fitur mencakup User Management Sales, pengaturan skema gaji, simulasi penggajian, serta dashboard performa dan pendapatan AE.</p>
+    <div class="badge-row">
+      <span class="badge bd-blue">UI/UX Redesign</span>
+      <span class="badge bd-blue">Internship Project</span>
+      <span class="badge bd-gray">Enterprise UX</span>
+      <span class="badge bd-gray">Figma</span>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-lbl">Tahun</div>
+        <div class="meta-val">2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Platform</div>
+        <div class="meta-val">Web App (Desktop)</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Peran</div>
+        <div class="meta-val">UI/UX Designer Intern</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Perusahaan</div>
+        <div class="meta-val">Dasaria</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="sec">
+    <div class="sec-ey">Overview</div>
+    <h2 class="sec-h">Latar Belakang</h2>
+    <p class="sec-p">Perancangan dan pengembangan modul Skema Penggajian AE ini dilatarbelakangi oleh kebutuhan operasional bisnis untuk mengotomatisasi serta merapikan perhitungan gaji dan manajemen data Account Executive (AE) secara akurat. 
+      Sistem lama menghadapi kendala dalam hal kompleksitas kalkulasi insentif, fragmentasi pengelolaan data sales antar-departemen, serta keterbatasan visualisasi ringkasan pendapatan bagi manajemen maupun pengguna. 
+      Melalui pembaruan ini, fokus diberikan pada integrasi data User Management, penyusunan List & Add Skema Gaji, hingga pembuatan Dashboard Ringkasan AE dan fitur Simulasi Penggajian yang intuitif dan transparan.</p>
+    <!-- <p class="sec-p">Antarmuka lama memiliki banyak masalah: navigasi yang membingungkan, alur yang tidak konsisten, dan tampilan visual yang tidak mencerminkan standar modern. Proyek internship ini berfokus pada <strong>redesain menyeluruh</strong> untuk meningkatkan produktivitas karyawan.</p> -->
+  </div>
+
+  
+
+  <div class="sec">
+    <div class="sec-ey">Design Process</div>
+    <h2 class="sec-h">Proses Design</h2>
+    <div class="proc-list">
+      <div class="proc-item">
+        <div class="proc-n">01</div>
+        <div>
+          <div class="proc-t">Analisis Kebutuhan & Evaluasi Sistem (Empathize & Audit)</div>
+          <div class="proc-d">Mengidentifikasi kendala pada proses pengelolaan gaji sebelumnya, seperti tingginya risiko human error dalam perhitungan manual, struktur data sales yang terpencar, serta kurangnya transparansi ringkasan pendapatan bagi AE.</div>
+          <div class="proc-tags">
+            <span class="ptag">Heuristic Evaluation</span>
+            <span class="ptag">Requirements Gathering</span>
+            <span class="ptag">UX Audit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">02</div>
+        <div>
+          <div class="proc-t">Perancangan Arsitektur Informasi & Alur (Information Architecture & Flow)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Menyusun struktur navigasi dan hierarki modul yang terbagi menjadi beberapa entitas utama: Skema Penggajian AE, User Management Sales, dan Dashboard Ringkasan AE.</li>
+            <li>Merancang alur (flow) mulai dari Create/Edit Sales, pengaturan skema gaji oleh admin, hingga simulasi perhitungan gaji secara real-time.</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">Information Architecture</span>
+            <span class="ptag">User Flow</span>
+            <span class="ptag">Enterprise UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">03</div>
+        <div>
+          <div class="proc-t">Eksplorasi Fitur & Perancangan Antarmuka (Ideation & Prototyping)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Mengembangkan fitur utama seperti List Skema Gaji, Tambah Skema Gaji, Simulasi Penggajian AE, hingga Detail Hot Prospect untuk mendukung kebutuhan Admin HRBP.</li>
+            <li>Melakukan optimalisasi tata letak dashboard (HRBP Dashboard & Dashboard Ringkasan AE) agar data finansial dan performa sales dapat dibaca dengan cepat dan akurat.</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">Wireframing</span>
+            <span class="ptag">Dashboard Design</span>
+            <span class="ptag">Feature Ideation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">04</div>
+        <div>
+          <div class="proc-t">Penyempurnaan & Implementasi Sistem (UI Refinement & Handoff)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Menstandardisasi komponen UI ke dalam sistem desain perusahaan untuk memastikan konsistensi visual di seluruh modul.</li>
+            <li>Melakukan design handoff dan kolaborasi erat bersama tim pengembang untuk memastikan implementasi sesuai dengan rancangan staging system</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">UI Consistency</span>
+            <span class="ptag">Design System</span>
+            <span class="ptag">Design Handoff</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">UI Preview</div>
+    <h2 class="sec-h">Tampilan Desain Baru</h2>
+    
+    <!-- CSS Khusus untuk fitur scroll disisipkan di sini -->
+    <style>
+      .ui-grid-scroll {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      
+      .mock {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      /* Modifikasi bungkus mock dengan aspect-ratio */
+      .mock-scroll-container {
+        width: 100%;
+        aspect-ratio: 16 / 10; /* Rasio standar layar desktop, otomatis menyamakan tinggi Tabel Utama */
+        overflow-y: auto; 
+        overflow-x: hidden;
+        border-radius: 8px;
+        margin-top: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.2); 
+      }
+
+      /* Mempercantik tampilan scrollbar */
+      .mock-scroll-container::-webkit-scrollbar {
+        width: 6px;
+      }
+      .mock-scroll-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 8px;
+      }
+      .mock-scroll-container::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+      }
+      .mock-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      .mock-img-scroll {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Responsif: Menjadi 1 kolom di layar HP */
+      @media (max-width: 768px) {
+        .ui-grid-scroll {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <div class="ui-grid-scroll">
+      <div class="mock">
+        <span class="mock-lbl">Tabel Utama</span>
+        <div class="mock-scroll-container">
+          <img src="../Detail Page/img/Salary Management List.png" alt="Tabel Utama" class="mock-img-scroll">
+        </div>
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Tambah Skema Gaji</span>
+        <div class="mock-scroll-container">
+          <img src="../Detail Page/img/Add Scheme Salary.png" alt="Tambah Skema Gaji" class="mock-img-scroll">
+        </div>
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Detail Skema Gaji</span>
+        <div class="mock-scroll-container">
+          <img src="../Detail Page/img/Detail Scheme Salary v2.png" alt="Detail Skema Gaji" class="mock-img-scroll">
+        </div>
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Sales Assignment</span>
+        <div class="mock-scroll-container">
+          <img src="../Detail Page/img/Salary Management List.png" alt="Sales Assignment" class="mock-img-scroll">
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="sec">
+    <div class="sec-ey">Results</div>
+    <h2 class="sec-h">Hasil Pekerjaan</h2>
+    <div class="res-card">
+      <div class="res-num" style="font-size:1.8rem">8→4</div>
+      <div class="res-d"><strong>Otomatisasi & Efisiensi Penggajian</strong>
+        <br>Menggantikan proses perhitungan manual yang rumit dengan sistem Skema Penggajian AE dan fitur Simulasi Penggajian yang terintegrasi, memangkas waktu administratif HRBP secara signifikan.
+      </div>
+    </div>
+    <div class="res-card">
+      <div class="res-num">✓</div>
+      <div class="res-d"><strong>Sentralisasi Manajemen Sales</strong>
+        <br>Menghadirkan modul User Management Sales yang terstruktur rapi untuk mempermudah proses pembuatan, penyuntingan, dan pengelolaan data sales (Create/Edit Sales) secara real-time.
+      </div>
+    </div>
+    <div class="res-card">
+      <div class="res-num">↑</div>
+      <div class="res-d"><strong>Transparansi Dashboard Eksekutif</strong>
+        <br>Menyediakan Dashboard Ringkasan AE dan HRBP Dashboard yang menyajikan ringkasan pendapatan (Ringkasan Pendapatan AE) serta detail prospek (Detail Hot Prospect) dalam satu tampilan yang bersih dan mudah dianalisis.
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">Refleksi</div>
+    <h2 class="sec-h">Yang Saya Pelajari</h2>
+    <p class="sec-p">Proyek ini memberikan pengalaman mendalam dalam merancang sistem skala enterprise (Enterprise UX) yang kompleks, di mana logika bisnis yang ketat (seperti skema penggajian dan manajemen finansial) harus diterjemahkan ke dalam antarmuka yang sederhana dan mudah digunakan.</p>
+    <p class="sec-p">Saya belajar bahwa mendesain produk internal perusahaan menuntut pemahaman mendalam mengenai aturan operasional yang kaku, kolaborasi lintas peran dengan tim non-desain, serta pentingnya menjaga akurasi data agar sistem dapat diandalkan dalam operasional</p>
+    <div class="tags-row">
+      <span class="tg">Enterprise UX</span>
+      <span class="tg">Stakeholder Management</span>
+      <span class="tg">Design Handoff</span>
+      <span class="tg">Corporate Environment</span>
+      <span class="tg">Heuristic Evaluation</span>
+      <span class="tg">Design System</span>
+    </div>
+  </div>
+
+</div> 
+
+<!-- KOTAK CTA KONSISTEN DENGAN HOMEPAGE (DIGABUNG MENJADI 1) -->
+<div class="wrap" style="padding-top: 60px; padding-bottom: 60px;">
+  <div class="contact-box" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <h2>Mari Wujudkan Proyek Selanjutnya</h2>
+    <p>Saya terbuka untuk diskusi proyek baru, freelance, maupun peluang full-time.</p>
+    
+    <div class="contact-links" style="margin-bottom: 36px; justify-content: center;">
+      <a href="mailto:diaayuwulansari@gmail.com" class="clink">Hubungi Saya (Email)</a>
+      <a href="../index.html" class="clink">← Kembali ke Beranda</a>
+    </div>
+
+    <!-- Navigasi Proyek di dalam Contact Box -->
+    <div class="proj-nav-inside" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; text-align: left;">
+      <a href="../index.html" class="pn-in" style="text-decoration: none;">
+        <span style="display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 2px;">← Beranda Utama</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fff;">Kembali ke Portofolio</span>
+      </a>
+      <!-- <a href="./project-PencapaianBranch.html" class="pn-in right" style="text-decoration: none; text-align: right;">
+        <span style="display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 2px;">Proyek Berikutnya →</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fff;">Pencapaian Branch</span>
+      </a> -->
+      <a href="./project-udjaya.html" class="pn-in right" style="text-decoration: none; text-align: right;">
+        <span style="display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 2px;">Proyek Berikutnya →</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fff;">UD Jaya</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
