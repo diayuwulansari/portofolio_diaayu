@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesign Apk Web - System Complaine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Detail Page/project-detail.css">
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<!-- Cursor glow background (shared with root script) -->
+<div id="cursor-glow"></div>
+
+<nav>
+  <a href="../index.html" class="logo">Dia Ayu<span>.</span></a>
+  <span class="nav-tag">CASE STUDY</span>
+  <a href="../index.html#projects" class="back-btn">← Kembali</a>
+</nav>
+
+<div class="proj-hero">
+  <div class="hero-bg"></div>
+  
+  <canvas id="topoCanvas"></canvas>
+  
+  <div class="desk-mock">
+    <div class="desk-topbar">
+      <div class="desk-dot" style="background:#ef4444;opacity:.5"></div>
+      <div class="desk-dot" style="background:#eab308;opacity:.5"></div>
+      <div class="desk-dot" style="background:#22c55e;opacity:.5"></div>
+    </div>
+    <div class="desk-body">
+      <div class="desk-sidebar">
+        <div class="desk-si active"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+        <div class="desk-si"></div>
+      </div>
+      <div class="desk-main">
+        <div class="desk-header"></div>
+        <div class="desk-cards">
+          <div class="desk-card"></div>
+          <div class="desk-card"></div>
+          <div class="desk-card"></div>
+        </div>
+        <div class="desk-row" style="margin-top:6px"></div>
+        <div class="desk-row" style="width:80%"></div>
+        <div class="desk-row" style="width:60%"></div>
+        <div class="desk-row" style="margin-top:4px"></div>
+        <div class="desk-row" style="width:70%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">04 — Case Study · internship 2026</div>
+    
+    <h1 class="proj-title">Redesign Apk Web<br><span style="-webkit-text-stroke:1px #696969;color:transparent">System Complaint</span></h1>
+    
+    <p class="proj-sub">Proyek ini berfokus pada perancangan ulang (redesign) dan peningkatan fungsionalitas pada System Complaint untuk meningkatkan efisiensi alur kerja operasional bisnis serta memberikan pengalaman pengguna (user experience) yang lebih bersih, intuitif, dan seamless.</p>
+    <div class="badge-row">
+      <span class="badge bd-blue">UI/UX Redesign</span>
+      <span class="badge bd-blue">Internship Project</span>
+      <span class="badge bd-gray">Enterprise UX</span>
+      <span class="badge bd-gray">Figma</span>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-lbl">Tahun</div>
+        <div class="meta-val">2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Platform</div>
+        <div class="meta-val">Web App (Desktop)</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Peran</div>
+        <div class="meta-val">UI/UX Designer Intern</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-lbl">Perusahaan</div>
+        <div class="meta-val">Dasaria</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="sec">
+    <div class="sec-ey">Overview</div>
+    <h2 class="sec-h">Latar Belakang</h2>
+    <p class="sec-p">Perancangan ulang (redesign) System Complaint ini dilatarbelakangi oleh kebutuhan untuk mengatasi kendala pengalaman pengguna (user experience) pada versi sebelumnya, seperti alur pengisian formulir penilaian yang masih terfragmentasi secara step-by-step, tingginya visual clutter akibat penggunaan garis dan elemen card yang berlebihan, serta minimnya fleksibilitas penyimpanan data sementara. 
+      Melalui proyek ini, fokus diberikan pada optimalisasi arsitektur informasi dan visual cleanup—mengubah alur menjadi single-page form yang lebih intuitif, menyediakan fitur simpan draft dengan penguncian data otomatis, serta menyusun ulang tata letak halaman Detail Tiket dan preview agar tampil lebih bersih, konsisten, dan nyaman digunakan oleh tim operasional.</p>
+    <!-- <p class="sec-p">Antarmuka lama memiliki banyak masalah: navigasi yang membingungkan, alur yang tidak konsisten, dan tampilan visual yang tidak mencerminkan standar modern. Proyek internship ini berfokus pada <strong>redesain menyeluruh</strong> untuk meningkatkan produktivitas karyawan.</p> -->
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">Problem Analysis</div>
+    <h2 class="sec-h">Sebelum vs Sesudah</h2>
+    <div class="compare-grid">
+      
+      <!-- Kolom Sebelum Redesign -->
+      <div class="compare-col">
+        <div class="compare-header before">❌ Sebelum Redesign</div>
+        <div class="compare-body">
+          <div class="compare-item">
+            <span class="ci-ico">😵</span>
+            <div><strong>Alur Pengisian (Form Flow):</strong> Menggunakan sistem step-by-step yang terfragmentasi, membuat proses input data terasa lebih panjang dan kaku.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">🐌</span>
+            <div><strong>Manajemen Data Sementara:</strong> Tidak ada opsi penyimpanan draft yang fleksibel, berisiko kehilangan progres pengisian data.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">🎨</span>
+            <div><strong>Tata Letak Halaman Detail:</strong> Informasi riwayat penilaian masih belum terstruktur dengan baik di dalam halaman detail tiket.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">📱</span>
+            <div><strong>Kerapian Visual (Visual Clutter):</strong> Penggunaan elemet kotak (card), garis (line) pemisah dan step line terlalu padat sehingga antar muka terlihat penuh.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">⏱️</span>
+            <div><strong>Konsistensi & Status Kosong:</strong> Data kosong atau preview sering ditampilkan menggunakan tanda strip (-) atau badge yang tidak esensial.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Sesudah Redesign -->
+      <div class="compare-col">
+        <div class="compare-header after">✅ Sesudah Redesign</div>
+        <div class="compare-body">
+          <div class="compare-item">
+            <span class="ci-ico">🗺️</span>
+            <div><strong>Alur Pengisian (Form Flow):</strong> Diubah menjadi single-page form, memungkinkan pengguna mengisi seluruh informasi dalam satu halaman dengan lebih cepat dan efisien.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">⚡</span>
+            <div><strong>Manajemen Data Sementara:</strong> Ditambahkan fitur Simpan Draft dengan sistem penguncian data otomatis untuk mengamankan progres sebelum data disubmit penuh.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">✨</span>
+            <div><strong>Tata Letak Halaman Detail:</strong> Ditambahkan section khusus Riwayat Penilaian di bawah Informasi Eskalasi dengan tata letak yang lebih rapi dan intuitif.</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">💻</span>
+            <div><strong>Kerapian Visual (Visual Clutter):</strong> Melakukan visual cleanup dengan mengurangi penggunaan garis/kotak berlebih dan menghapus step line agar tampilan lebih bersih (clean layout).</div>
+          </div>
+          <div class="compare-item">
+            <span class="ci-ico">💾</span>
+            <div><strong>Konsistensi & Status Kosong:</strong> Kondisi kosong ditampilkan secara bersih tanpa tanda strip (-) maupun badge, serta posisi tombol (seperti Tambah, Reset, dan Info Penilaian) diseragamkan ukurannya agar konsisten.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">Design Process</div>
+    <h2 class="sec-h">Proses Redesain</h2>
+    <div class="proc-list">
+      <div class="proc-item">
+        <div class="proc-n">01</div>
+        <div>
+          <div class="proc-t">Analisis Masalah & Evaluasi Sistem Lama (Empathize & Audit)</div>
+          <div class="proc-d">Mengidentifikasi kendala pada antarmuka (interface) sebelumnya, seperti alur pengisian formulir penilaian yang terfragmentasi secara step-by-step, tingginya visual clutter akibat penggunaan garis (line) dan kotak (card) berlebihan, serta inkonsistensi penempatan tombol (button).</div>
+          <div class="proc-tags">
+            <span class="ptag">Heuristic Evaluation</span>
+            <span class="ptag">Pain Points Analysis</span>
+            <span class="ptag">UX Audit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">02</div>
+        <div>
+          <div class="proc-t">Perancangan Arsitektur Informasi & Alur (Information Architecture & Flow)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Mengubah alur pengisian data penilaian dari <em>step-by-step</em> menjadi <em>single-page form</em> untuk mempercepat proses input data dalam satu halaman penuh.</li>
+            <li>Menata ulang hierarki informasi pada halaman Detail Tiket dengan menambahkan section khusus Riwayat Penilaian di bawah Informasi Eskalasi dan memindahkan informasi <em>Last Edited</em> ke bawah area Preview.</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">Information Architecture</span>
+            <span class="ptag">User Flow</span>
+            <span class="ptag">Single-Page Form</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">03</div>
+        <div>
+          <div class="proc-t">Eksplorasi Fitur & Pembersihan Visual (Ideation & Visual Cleanup)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Merancang fitur pengaman data berupa tombol Simpan Draft dengan mekanisme penguncian data otomatis meskipun penilaian belum sepenuhnya disubmit.</li>
+            <li>Melakukan visual cleanup secara menyeluruh: menghapus step line yang tidak perlu pada riwayat penilaian, mengurangi garis pemisah (line) yang membuat tampilan padat, serta menghilangkan tanda strip (-) atau badge pada preview saat data kosong agar terlihat lebih bersih (clean layout).</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">Visual Cleanup</span>
+            <span class="ptag">Wireframing</span>
+            <span class="ptag">Feature Ideation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-item">
+      <div class="proc-n">04</div>
+        <div>
+          <div class="proc-t">Penyempurnaan Konsistensi Antarmuka (UI Refinement & Consistency)</div>
+          <ul class="proc-d" style="padding-left: 18px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Menyeragamkan ukuran serta label tombol pada menu penilaian baru (mengubahnya menjadi tombol Tambah yang ukurannya disamakan dengan tombol Reset).</li>
+            <li>Menyelaraskan gaya visual tombol Info Penilaian agar konsisten dengan standar tombol pada bagian Tindakan.</li>
+            <li>Menyembunyikan data baru pada Level 2 dan memprioritaskan penampilan data lama untuk menjaga kestabilan informasi visual bagi pengguna.</li>
+          </ul>
+          <div class="proc-tags">
+            <span class="ptag">UI Consistency</span>
+            <span class="ptag">Design System</span>
+            <span class="ptag">Design Handoff</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">UI Preview</div>
+    <h2 class="sec-h">Tampilan Desain Baru</h2>
+    <div class="cg2">
+      <div class="mock">
+        <span class="mock-lbl">Dashboard Utama</span>
+        <img src="../Detail Page/img/Dashboard - STAFF TDC.png" alt="Dashboard Utama" class="mock-img">
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Daftar Tiket</span>
+        <img src="../Detail Page/img/input Sertif.png" alt="Dashboard Utama" class="mock-img">
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Input Tiket</span>
+        <img src="../Detail Page/img/Halaman Detail WO.png" alt="Dashboard Utama" class="mock-img">
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Penambahan Penilaian Baru</span>
+        <img src="../Detail Page/img/detail Laporan.png" alt="Dashboard Utama" class="mock-img">
+      </div>
+      <div class="mock">
+        <span class="mock-lbl">Riwayat Tiket</span>
+        <img src="../Detail Page/img/detail Laporan.png" alt="Dashboard Utama" class="mock-img">
+      </div>
+    </div>
+  </div>  
+
+  <div class="sec">
+    <div class="sec-ey">Results</div>
+    <h2 class="sec-h">Hasil Pekerjaan</h2>
+    <div class="res-card">
+      <div class="res-num" style="font-size:1.8rem">8→4</div>
+      <div class="res-d"><strong>Penyederhanaan Alur Pengisian</strong><br>Alur pengisian penilaian komplain berhasil disederhanakan dari metode step-by-step yang panjang menjadi single-page form, memangkas waktu input data secara signifikan bagi tim operasional.</div>
+    </div>
+    <div class="res-card">
+      <div class="res-num">✓</div>
+      <div class="res-d"><strong>Keamanan & Fleksibilitas Data</strong><br>Menghadirkan fitur Simpan Draft dengan sistem penguncian data otomatis, memastikan seluruh progres pengisian agen tetap aman dan tersimpan meskipun penilaian belum disubmit sepenuhnya.</div>
+    </div>
+    <div class="res-card">
+      <div class="res-num">↑</div>
+      <div class="res-d"><strong>Pembersihan Elemen Visual (Visual Cleanup)</strong><br>Mengoptimalkan tata letak antarmuka dengan mengurangi penggunaan garis (line) dan kotak (card) berlebihan, menghilangkan step line, serta merapikan kondisi preview kosong tanpa tanda strip (-) untuk menciptakan tampilan yang jauh lebih bersih (clean layout).</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-ey">Refleksi</div>
+    <h2 class="sec-h">Yang Saya Pelajari</h2>
+    <p class="sec-p">Proyek perancangan ulang ini memberikan pemahaman mendalam tentang pentingnya menyeimbangkan efisiensi alur kerja operasional (operational workflow) dengan kemudahan navigasi bagi pengguna internal seperti tim Customer Care. 
+      Melalui optimalisasi dari alur step-by-step menjadi single-page form, saya belajar bahwa pemangkasan langkah input tidak hanya mempercepat proses kerja, tetapi juga menuntut kehati-hatian dalam merancang arsitektur informasi agar tidak membingungkan pengguna.</p>
+    <p class="sec-p">Pengalaman ini juga mengajarkan saya bagaimana melakukan visual cleanup secara terstruktur—mulai dari mengurangi elemen garis dan kartu yang berlebihan, menyelaraskan konsistensi tombol, hingga mengamankan progres data melalui fitur draft. 
+      Hal ini menyadarkan saya bahwa detail-detail kecil pada antarmuka berdampak besar terhadap kenyamanan visual dan produktivitas harian pengguna.</p>
+    <div class="tags-row">
+      <span class="tg">Internal Tool UX</span>
+      <span class="tg">Workflow Optimization</span>
+      <span class="tg">Form Redesign</span>
+      <span class="tg">Visual Cleanup</span>
+      <span class="tg">Information Architecture</span>
+      <span class="tg">UI Consistency</span>
+    </div>
+  </div>
+
+</div> 
+
+<!-- KOTAK CTA KONSISTEN DENGAN HOMEPAGE (DIGABUNG MENJADI 1) -->
+<div class="wrap" style="padding-top: 60px; padding-bottom: 60px;">
+  <div class="contact-box" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <h2>Mari Wujudkan Proyek Selanjutnya</h2>
+    <p>Saya terbuka untuk diskusi proyek baru, freelance, maupun peluang full-time.</p>
+    
+    <div class="contact-links" style="margin-bottom: 36px; justify-content: center;">
+      <a href="mailto:diaayuwulansari@gmail.com" class="clink">Hubungi Saya (Email)</a>
+      <a href="../index.html" class="clink">← Kembali ke Beranda</a>
+    </div>
+
+    <!-- Navigasi Proyek di dalam Contact Box -->
+    <div class="proj-nav-inside" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; text-align: left;">
+      <a href="../index.html" class="pn-in" style="text-decoration: none;">
+        <span style="display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 2px;">← Beranda Utama</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fff;">Kembali ke Portofolio</span>
+      </a>
+      <a href="./project-SkemaPenggajian.html" class="pn-in right" style="text-decoration: none; text-align: right;">
+        <span style="display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 2px;">Proyek Berikutnya →</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fff;">Skema Penggajian AE</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
